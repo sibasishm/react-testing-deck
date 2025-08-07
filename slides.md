@@ -43,6 +43,29 @@ transition: slide-up
 level: 2
 ---
 
+# What This Session is "NOT" About
+
+<v-click>
+- ❌ How to setup tools for testing
+</v-click>
+<br />
+<v-click>
+- ❌ Jest vs Vitest OR RTL vs Enzyme
+</v-click>
+<br />
+<v-click>
+- ❌ How to write test!
+</v-click>
+<br />
+<v-click>
+- ❌ How to STOP hating TDD
+</v-click>
+
+---
+transition: slide-up
+level: 2
+---
+
 # What We are Told vs What We Do
 
 ⚠️ The goal: Ship with confidence, not follow dogma.
@@ -60,11 +83,17 @@ level: 2
 
 # What Makes a Test Worth It?
 
+<v-click>
+
 ❌ Tests that:
 
 - Know too much about the internals
 - Break because of renames or DOM changes
 - Exist “just for coverage”
+
+</v-click>
+
+<v-click>
 
 ✅ Tests that:
 
@@ -72,6 +101,8 @@ level: 2
 - Are resilient to internal refactors
 - Save you from introducing regressions
 - Guide better component/API design
+
+</v-click>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -98,22 +129,34 @@ Here is another comment.
 
 # Testing Philosophy in Practice
 
+<v-click>
+
 > “The more your tests resemble how your software is used, the more confidence they can give you.”
 
 - Kent C. Dodds
+
+</v-click>
+
+<v-click>
 
 > “Focus on testing what Redux-connected components render and do — not their internals.”
 
 - Mark Erikson
 
+</v-click>
+
 <br/>
 <br/>
+
+<v-click>
 
 So we:
 
 - Avoid testing Redux logic in isolation
 - Use `renderWithProviders` and `MSW`
 - Write tests after the component is useful, not before
+
+</v-click>
 
 <!--
 Notes can also sync with clicks
@@ -136,6 +179,20 @@ Live coding and examples
 
 ---
 
+# What We Gained
+
+💡 Testing = documentation + confidence + courage
+
+✅ Fewer regressions in business-critical flows
+
+✅ Ability to refactor with confidence
+
+✅ Cleaner APIs (because tests exposed bad ones)
+
+✅ Onboarding is faster — tests show usage clearly
+
+---
+
 # When (Not) to Test
 
 💡 Think Cost vs Benefit and Test code you want to protect.
@@ -151,20 +208,6 @@ Low ROI:
 - Pure CSS/layout tweaks
 - Very early prototype UIs
 - Internals you plan to delete soon
-
----
-
-# What We Gained
-
-💡 Testing = documentation + confidence + courage
-
-✅ Fewer regressions in business-critical flows
-
-✅ Ability to refactor with confidence
-
-✅ Cleaner APIs (because tests exposed bad ones)
-
-✅ Onboarding is faster — tests show usage clearly
 
 <!--
 Your Next Steps
